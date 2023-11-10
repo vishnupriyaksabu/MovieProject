@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <Img src="{{MOVIE.Img.url}}" width="300" height="300">
+        </div>
+    <div class="col-md-6">
+        
+        <h3 style="color: #087d4e;">{{MOVIE.Name}}</h3>
+        <h5>{{MOVIE.Desc}}</h5>
+        <h3 style="color: #710e5d;">{{MOVIE.Year}}</h3>
+        <a class="btn btn-warning" href="{% url 'MOVIEAPP:updates' MOVIE.id %}" >UPDATE</a>
+        <a class="btn btn-danger" href="{% url 'MOVIEAPP:delete' MOVIE.id %}">DELETE</a>
+    </div>
+    </div>
+</div>
+{% endblock %}
+<!-- to showing the deatails that fetched -->
+<!-- <Img src="{{MOVIE.Img.url}}" width="250" height="150"; style="color: rgb(0, 0, 0);text-align: right;">{{MOVIE.Desc}} <br><br>  -->
+<!-- {{MOVIE.Name}}
+{{MOVIE.Year}} -->
+<!-- <a class="btn btn-warning" href="{% url 'MOVIEAPP:updates' MOVIE.id %}" >UPDATE</a>
+<a class="btn btn-danger" href="{% url 'MOVIEAPP:delete' MOVIE.id %}">DELETE</a> -->
+

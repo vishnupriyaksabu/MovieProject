@@ -1,0 +1,29 @@
+{% load static %}
+<html>
+<head><title>HOME</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+
+</head>
+<body>
+    <!-- <h1 style="background-color:#a0ca2d;text-align:center";>'''The movies are'''</h1> -->
+    <!-- Navigation creation -->
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">ONLINE MOVIE STORE</a>
+        <form class="form-inline">
+            <a class="btn btn-outline-warning" href="{% url 'MOVIEAPP:add_movie' %}">ADDMORE</a>
+              
+        </form>
+    
+  </nav>
+  <!-- <nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+      <button class="btn btn-outline-success" type="button">Main button</button>
+      <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
+    </form>
+  </nav> -->
+  {% block body %}
+  {% endblock %}
+</body>
+</html>
